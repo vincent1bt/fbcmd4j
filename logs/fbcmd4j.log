@@ -47,3 +47,7 @@ FacebookException{statusCode=403, errorType='OAuthException', errorMessage='(#20
 2019-11-29 16:07:41.102 [main] INFO  org.fbcmd4j.Main - Iniciando app
 2019-11-29 16:07:41.105 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
 2019-11-29 16:07:42.489 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 17:38:17.638 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 17:38:17.641 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 17:38:21.741 [main] INFO  org.fbcmd4j.Main - Obtener Wall
+2019-11-29 17:38:25.255 [main] INFO  org.fbcmd4j.Main - Guardar posts de Wall

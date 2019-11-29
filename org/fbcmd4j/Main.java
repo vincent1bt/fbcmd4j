@@ -17,6 +17,53 @@ import facebook4j.ResponseList;
 public class Main {
     static final Logger logger = LogManager.getLogger(Main.class);
 
+    public static void showPosts(ResponseList<Post> feed) {
+        for (Post post : feed) {
+            if(post.getStory() != null) {
+                System.out.println("Historia: " + post.getStory());
+            }
+                
+            if(post.getMessage() != null)
+                System.out.println("Mensaje: " + post.getMessage());
+            System.out.println("|o||o||o||o||o||o||o||o||o||o||o||o||o||o||o||o||o|");
+        }
+
+        System.out.println("======================================================");
+    }
+
+    public static void savePosts(ResponseList<Post> feed, String fileName, Scanner scanner) {
+        int postsSize = feed.size();
+        System.out.println("Cuantos posts quieres guardar? Maximo: " + Integer.toString(postsSize));
+        int size = Integer.parseInt(scanner.nextLine());
+        int index = 0;
+
+        try {
+            PrintWriter writer = new PrintWriter(fileName, "UTF-8");
+
+            for (Post post : feed) {
+                if (index == size) {
+                    break;
+                }
+
+                if(post.getStory() != null) {
+                    writer.println("Historia: " + post.getStory());
+                    System.out.println();
+                }
+                    
+                if(post.getMessage() != null) {
+                    writer.println("Mensaje: " + post.getMessage());
+                }
+                
+                index += 1;
+            }
+            
+            writer.close();
+            System.out.println("Archivo guardado");
+        } catch (Exception exception) {
+            logger.error(exception);
+        }
+    }
+
 	public static void main(String[] args) {
 		logger.info("Iniciando app");
         
@@ -46,53 +93,30 @@ public class Main {
                     System.out.println("NewsFeed: ");
                     ResponseList<Post> feed = facebook.getFeed();
 
-                    for (Post post : feed) {
-                        if(post.getStory() != null) {
-                            System.out.println("Historia: " + post.getStory());
-                        }
-                            
-                        if(post.getMessage() != null)
-                            System.out.println("Mensaje: " + post.getMessage());
-                        System.out.println("|o||o||o||o||o||o||o||o||o||o||o||o||o||o||o||o||o|");
-                    }
-            
-                    System.out.println("======================================================");
+                    showPosts(feed);
                     
                     System.out.println("Guardar el NewsFeed en un archivo de texto?");
                     String guardar = scanner.nextLine();
 
                     if (guardar.equals("si")) {
                         logger.info("Guardar posts de NewsFeed");
-                        int postsSize = feed.size();
-                        System.out.println("Cuantos posts quieres guardar? Maximo: " + Integer.toString(postsSize));
-                        int size = Integer.parseInt(scanner.nextLine());
-
-                        int index = 0;
-
-                        PrintWriter writer = new PrintWriter("NewsFeed.txt", "UTF-8");
-
-                        for (Post post : feed) {
-                            if (index == size) {
-                                break;
-                            }
-
-                            if(post.getStory() != null) {
-                                writer.println("Historia: " + post.getStory());
-                                System.out.println();
-                            }
-                                
-                            if(post.getMessage() != null) {
-                                writer.println("Mensaje: " + post.getMessage());
-                            }
-                            
-                            index += 1;
-                        }
-                        
-                        writer.close();
-                        System.out.println("Archivo guardado");
+                        savePosts(feed, "NewsFeed.txt", scanner);
                     }
 
                 } else if (respuesta.equals("2")) {
+                    logger.info("Obtener Wall");
+                    System.out.println("Wall: ");
+                    ResponseList<Post> wall = facebook.getPosts();
+                    
+                    showPosts(wall);
+
+                    System.out.println("Guardar el Wall en un archivo de texto?");
+                    String guardar = scanner.nextLine();
+
+                    if (guardar.equals("si")) {
+                        logger.info("Guardar posts de Wall");
+                        savePosts(wall, "Wall.txt", scanner);
+                    }
 
                 } else if (respuesta.equals("3")) {
 
@@ -110,8 +134,8 @@ public class Main {
                 }
             }
 
-		} catch (Exception error) {
-			logger.error(error);
+		} catch (Exception exception) {
+			logger.error(exception);
 		}
 	}
 }
