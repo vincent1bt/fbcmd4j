@@ -4,6 +4,8 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.PrintWriter;
+import java.net.URL;
+import java.net.MalformedURLException;
 
 import org.fbcmd4j.helper.LoadHelper;
 
@@ -119,6 +121,7 @@ public class Main {
                     }
 
                 } else if (respuesta.equals("3")) {
+                    logger.info("Publicar estado");
                     System.out.println("Escribe tu estado: ");
                     String estado = scanner.nextLine();
 
@@ -129,6 +132,17 @@ public class Main {
                     }	
 
                 } else if (respuesta.equals("4")) {
+                    logger.info("Publicar link");
+                    System.out.println("Escribe el link: ");
+                    String link = scanner.nextLine();
+
+                    try {
+                        facebook.postLink(new URL(link));
+                    } catch (FacebookException exception) {
+                        logger.error(exception);
+                    } catch (MalformedURLException urlException) {
+                        logger.error(urlException);
+                    }
 
                 } else if (respuesta.equals("5")) {
                     facebookHelper.createConfiguration(scanner);
