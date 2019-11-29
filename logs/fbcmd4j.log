@@ -1,0 +1,49 @@
+2019-11-29 15:28:21.731 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 15:28:21.734 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 15:28:23.813 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 15:28:24.356 [main] ERROR org.fbcmd4j.Main - message - Invalid OAuth access token.
+code - 190
+Relevant information for error recovery can be found on the Facebook Developers Document:
+	https://developers.facebook.com/docs/graph-api/using-graph-api/#errors
+
+FacebookException{statusCode=400, errorType='OAuthException', errorMessage='Invalid OAuth access token.', errorCode=190, errorSubcode=-1, version=2.4.13}
+2019-11-29 15:35:48.577 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 15:35:48.581 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 15:35:50.662 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 15:35:51.186 [main] ERROR org.fbcmd4j.Main - message - An active access token must be used to query information about the current user.
+code - 2500
+Relevant information for error recovery can be found on the Facebook Developers Document:
+	https://developers.facebook.com/docs/graph-api/using-graph-api/#errors
+
+FacebookException{statusCode=400, errorType='OAuthException', errorMessage='An active access token must be used to query information about the current user.', errorCode=2500, errorSubcode=-1, version=2.4.13}
+2019-11-29 15:47:47.586 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 15:47:47.590 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 15:47:49.554 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 15:50:07.391 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 15:50:07.394 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 15:50:08.981 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 15:52:56.453 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 15:52:56.456 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 15:52:57.382 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 15:52:59.882 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 15:53:05.357 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 15:58:11.664 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 15:58:11.667 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 15:58:24.875 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 15:58:24.877 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 15:58:27.686 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 15:58:29.446 [main] ERROR org.fbcmd4j.Main - message - (#200) This endpoint is deprecated since the required permission read_stream is deprecated
+code - 200
+Relevant information for error recovery can be found on the Facebook Developers Document:
+	https://developers.facebook.com/docs/graph-api/using-graph-api/#errors
+
+FacebookException{statusCode=403, errorType='OAuthException', errorMessage='(#200) This endpoint is deprecated since the required permission read_stream is deprecated', errorCode=200, errorSubcode=-1, version=2.4.13}
+2019-11-29 15:59:34.409 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 15:59:34.413 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 15:59:47.398 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 15:59:47.400 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 15:59:49.320 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 16:04:24.021 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
+2019-11-29 16:07:41.102 [main] INFO  org.fbcmd4j.Main - Iniciando app
+2019-11-29 16:07:41.105 [main] INFO  org.fbcmd4j.Main - Cargando configuracion por defecto
+2019-11-29 16:07:42.489 [main] INFO  org.fbcmd4j.Main - Obtener NewsFeed
