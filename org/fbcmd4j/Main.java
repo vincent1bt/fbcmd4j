@@ -119,6 +119,14 @@ public class Main {
                     }
 
                 } else if (respuesta.equals("3")) {
+                    System.out.println("Escribe tu estado: ");
+                    String estado = scanner.nextLine();
+
+                    try {
+                        facebook.postStatusMessage(estado);
+                    } catch (FacebookException exception) {
+                        logger.error(exception);
+                    }	
 
                 } else if (respuesta.equals("4")) {
 
