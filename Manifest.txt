@@ -1,0 +1,2 @@
+Main-Class: org/fbcmd4j/Main
+Class-Path: lib/facebook4j-core-2.4.13.jar lib/log4j-api-2.12.1.jar lib/log4j-core-2.12.1.jar
